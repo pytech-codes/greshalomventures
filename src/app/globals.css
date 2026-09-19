@@ -1,0 +1,263 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ocean-mist: #779ECB;
+  --ocean-mist-light: #99C1DE;
+  --ocean-mist-dark: #5A8EB3;
+  --seafoam: #B6E3D4;
+  --seafoam-light: #D4F1E8;
+  --seafoam-dark: #8FD4B9;
+  --mist-gray: #F1F5F9;
+  --mist-white: #FFFFFF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: linear-gradient(135deg, #F1F5F9 0%, #FFFFFF 100%);
+  color: #1e293b;
+  overflow-x: hidden;
+}
+
+/* Watercolor wash background effect */
+.watercolor-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.watercolor-layer {
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(ellipse at center, rgba(119, 158, 203, 0.08) 0%, transparent 70%);
+  animation: watercolor-drift 20s ease-in-out infinite;
+}
+
+.watercolor-layer:nth-child(2) {
+  background: radial-gradient(ellipse at center, rgba(182, 227, 212, 0.06) 0%, transparent 70%);
+  animation: watercolor-drift 25s ease-in-out infinite reverse;
+  animation-delay: -5s;
+}
+
+.watercolor-layer:nth-child(3) {
+  background: radial-gradient(ellipse at center, rgba(153, 193, 222, 0.05) 0%, transparent 70%);
+  animation: watercolor-drift 30s ease-in-out infinite;
+  animation-delay: -10s;
+}
+
+@keyframes watercolor-drift {
+  0%, 100% {
+    transform: translate(-25%, -25%) rotate(0deg);
+  }
+  50% {
+    transform: translate(-15%, -15%) rotate(5deg);
+  }
+}
+
+/* Glassmorphism effect */
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.glassmorphism-dark {
+  background: rgba(119, 158, 203, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(119, 158, 203, 0.2);
+}
+
+/* Ink bleed border effect */
+.ink-bleed-border {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.ink-bleed-border::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 20px;
+  padding: 2px;
+  background: linear-gradient(135deg, 
+    rgba(119, 158, 203, 0.3) 0%, 
+    rgba(182, 227, 212, 0.3) 50%, 
+    rgba(119, 158, 203, 0.3) 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Water ripple effect */
+.water-ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.water-ripple::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(119, 158, 203, 0.3);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.water-ripple:focus-within::after {
+  animation: ripple-effect 0.6s ease-out;
+}
+
+@keyframes ripple-effect {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0.5;
+  }
+  100% {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+  }
+}
+
+/* Splash animation container */
+.splash-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #779ECB 0%, #99C1DE 50%, #B6E3D4 100%);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.splash-text {
+  color: white;
+  font-size: 3rem;
+  font-weight: 300;
+  letter-spacing: 0.5em;
+  opacity: 0;
+}
+
+/* Product card hover effect */
+.product-card {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.product-card:hover {
+  background: linear-gradient(135deg, 
+    rgba(119, 158, 203, 0.1) 0%, 
+    rgba(182, 227, 212, 0.15) 100%);
+  transform: translateY(-5px);
+}
+
+.product-card:hover .product-image {
+  transform: scale(1.05);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #779ECB, #B6E3D4);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #5A8EB3, #8FD4B9);
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .watercolor-layer {
+    animation-duration: 30s;
+  }
+  
+  .glassmorphism {
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+  }
+  
+  .splash-text {
+    font-size: 2rem;
+    letter-spacing: 0.3em;
+  }
+}
+
+/* Section dissolve animation */
+.section-dissolve {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.section-dissolve.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Floating bottle effect */
+.floating-bottle {
+  animation: float-bottle 6s ease-in-out infinite;
+}
+
+@keyframes float-bottle {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(2deg);
+  }
+}
+
+/* WhatsApp button pulse */
+.whatsapp-pulse {
+  animation: whatsapp-pulse 2s ease-in-out infinite;
+}
+
+@keyframes whatsapp-pulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(119, 158, 203, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(119, 158, 203, 0.6);
+  }
+}
