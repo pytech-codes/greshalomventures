@@ -26,7 +26,7 @@ const products: Product[] = [
     price: 1500,
     volume: 'Pack of 12 (75cl)',
     status: 'available',
-    image: '/images/products/cresta-pack.jpg',
+    image: '/images/products/cresta-pack.png',
   },
   {
     id: '2',
@@ -35,7 +35,7 @@ const products: Product[] = [
     price: 1500,
     volume: 'Pack of 12 (75cl)',
     status: 'available',
-    image: '/images/products/imperial-pack.jpg',
+    image: '/images/products/imperial-pack.png',
   },
   {
     id: '3',
@@ -44,7 +44,7 @@ const products: Product[] = [
     price: 200,
     volume: 'Single Bottle (75cl)',
     status: 'available',
-    image: '/images/products/cresta-single.jpg',
+    image: '/images/products/cresta-single.png',
   },
   {
     id: '4',
@@ -53,7 +53,7 @@ const products: Product[] = [
     price: 200,
     volume: 'Single Bottle (75cl)',
     status: 'available',
-    image: '/images/products/imperial-single.jpg',
+    image: '/images/products/imperial-single.png',
   },
   {
     id: '5',
@@ -62,7 +62,7 @@ const products: Product[] = [
     price: null,
     volume: '50cl Sachet / Bag',
     status: 'coming-soon',
-    image: '/images/products/sachet-water.jpg',
+    image: '/images/products/sachet-water.png',
   },
 ];
 
@@ -151,7 +151,7 @@ const Products = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {products.map((product) => (
             <div
               key={product.id}
@@ -160,23 +160,21 @@ const Products = () => {
               }`}
             >
               {/* Product Image */}
-              <div className="relative h-48 mb-6 flex items-center justify-center">
-                <div className="absolute inset-0 glassmorphism-dark rounded-xl" />
-                <div className="relative z-10 w-full h-full flex items-center justify-center p-4">
-                  <img 
-                    src={product.image}
-                    alt={product.name}
-                    className="w-full h-full object-contain drop-shadow-lg"
-                    onError={(e) => {
-                      e.currentTarget.src = '/bottle.jpg';
-                    }}
-                  />
-                </div>
-                <div className="absolute bottom-2 right-2 bg-white/80 backdrop-blur-sm px-2 py-1 rounded-full text-xs font-medium text-ocean-mist">
+              <div className="relative h-48 mb-6 overflow-hidden rounded-xl">
+                <div className="absolute inset-0 glassmorphism-dark" />
+                <img 
+                  src={product.image}
+                  alt={product.name}
+                  className="relative z-10 w-full h-full object-cover"
+                  onError={(e) => {
+                    e.currentTarget.src = '/bottle.png';
+                  }}
+                />
+                <div className="absolute bottom-2 right-2 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-medium text-ocean-mist shadow-sm">
                   {product.volume}
                 </div>
                 {product.status === 'coming-soon' && (
-                  <div className="absolute top-2 left-2 bg-amber-500 text-white px-3 py-1 rounded-full text-xs font-medium">
+                  <div className="absolute top-2 left-2 bg-amber-500 text-white px-3 py-1 rounded-full text-xs font-medium shadow-sm">
                     Coming Soon
                   </div>
                 )}

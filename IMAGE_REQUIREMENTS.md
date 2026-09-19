@@ -1,23 +1,34 @@
 # Product Image Requirements
 
+## Exact File Path
+**C:\Baba_water\public\images\products\**
+
+## Current Files (Already Uploaded)
+✅ cresta-pack.png (744KB) - Cresta Table Water (Pack)
+✅ imperial-pack.png (679KB) - Imperial Table Water (Pack)
+✅ cresta-single.png (562KB) - Cresta Table Water (Single Bottle)
+✅ imperial-single.png (525KB) - Imperial Table Water (Single Bottle)
+✅ sachet-water.png (598KB) - Greshalom Pure Water (Sachet)
+
 ## Directory Structure
 ```
 public/images/products/
-├── cresta-pack.jpg          # Cresta Table Water (Pack)
-├── imperial-pack.jpg        # Imperial Table Water (Pack)
-├── cresta-single.jpg        # Cresta Table Water (Single Bottle)
-├── imperial-single.jpg      # Imperial Table Water (Single Bottle)
-└── sachet-water.jpg         # Greshalom Pure Water (Sachet)
+├── cresta-pack.png          # Cresta Table Water (Pack) ✅
+├── imperial-pack.png        # Imperial Table Water (Pack) ✅
+├── cresta-single.png        # Cresta Table Water (Single Bottle) ✅
+├── imperial-single.png      # Imperial Table Water (Single Bottle) ✅
+└── sachet-water.png         # Greshalom Pure Water (Sachet) ✅
 ```
 
 ## Image Specifications
 
 ### Technical Requirements
-- **Format**: JPG or PNG with transparency preferred
+- **Format**: PNG (preferred for transparency) or JPG
 - **Dimensions**: 400x400px (standard) or 800x800px (retina/2x)
 - **File Size**: Under 500KB per image for optimal loading
 - **Background**: White or transparent
 - **Color Profile**: sRGB
+- **Sizing**: Images will fill the entire card width (object-cover)
 
 ### Visual Guidelines
 - **Style**: Clean, professional product photography
