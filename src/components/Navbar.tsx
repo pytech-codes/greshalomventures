@@ -33,14 +33,8 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          {/* Logo */}
-          <div className="flex items-center space-x-3">
-            <img 
-              src="/images/cresta_water_logo.png" 
-              alt="Cresta Water Logo" 
-              className="h-10 w-auto object-contain"
-            />
-            <span className="text-xl font-light text-gray-800 tracking-wide">
+          <div className="flex items-center">
+            <span className="bg-gradient-to-r from-ocean-mist-dark via-ocean-mist to-seafoam-dark bg-clip-text text-xl font-bold tracking-wide text-transparent">
               Greshalom Ventures
             </span>
           </div>

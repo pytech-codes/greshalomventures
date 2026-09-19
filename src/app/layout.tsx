@@ -5,8 +5,12 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Greshalom Ventures - Pure Water, Pure Life',
-  description: 'Experience the essence of purity with Greshalom Ventures. Premium spring water delivered to your doorstep.',
+  title: 'Greshalom Ventures - Premium Table & Sachet Water',
+  description: 'Reliable, hygienic drinking water delivery for homes, offices, and events.',
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/apple-icon.png',
+  },
 };
 
 export default function RootLayout({

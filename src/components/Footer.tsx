@@ -9,13 +9,8 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Brand */}
           <div>
-            <div className="flex items-center space-x-3 mb-4">
-              <img 
-                src="/images/cresta_water_logo.png" 
-                alt="Cresta Water Logo" 
-                className="h-12 w-auto object-contain"
-              />
-              <span className="text-xl font-light text-gray-800 tracking-wide">
+            <div className="mb-4">
+              <span className="bg-gradient-to-r from-ocean-mist-dark via-ocean-mist to-seafoam-dark bg-clip-text text-xl font-bold tracking-wide text-transparent">
                 Greshalom Ventures
               </span>
             </div>
