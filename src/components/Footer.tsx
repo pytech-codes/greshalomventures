@@ -26,15 +26,15 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3 text-gray-600 font-light text-sm">
                 <IconPhone className="w-5 h-5 text-ocean-mist" />
-                <span>+234 800 000 0000</span>
+                <span>+234 8169446071</span>
               </div>
               <div className="flex items-center space-x-3 text-gray-600 font-light text-sm">
                 <IconMail className="w-5 h-5 text-ocean-mist" />
-                <span>info@greshalom.com</span>
+                <span>Owosenimojisola72@gmail.com</span>
               </div>
               <div className="flex items-center space-x-3 text-gray-600 font-light text-sm">
                 <IconMapPin className="w-5 h-5 text-ocean-mist" />
-                <span>Lagos, Nigeria</span>
+                <span>Ibadan, Nigeria</span>
               </div>
             </div>
           </div>

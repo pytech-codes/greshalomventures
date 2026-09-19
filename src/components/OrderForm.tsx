@@ -95,7 +95,8 @@ const OrderForm = () => {
     message += `🛒 *Order Items:*\n`;
     items.forEach((item) => {
       if (item.quantity > 0) {
-        message += `• ${item.name} (${item.volume})\n`;
+        message += `• ${item.name}\n`;
+        message += `  ${item.volume}\n`;
         message += `  ${item.quantity}x ₦${item.price.toLocaleString()} = ₦${(item.price * item.quantity).toLocaleString()}\n`;
       }
     });

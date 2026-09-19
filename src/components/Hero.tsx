@@ -9,7 +9,7 @@ gsap.registerPlugin(ScrollTrigger);
 const Hero = () => {
   const heroRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
-  const subtitleRef = useRef<HTMLParagraph>(null);
+  const subtitleRef = useRef<HTMLParagraphElement>(null);
   const bottleRef = useRef<HTMLDivElement>(null);
   const splashRef = useRef<HTMLDivElement>(null);
 

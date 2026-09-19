@@ -111,7 +111,7 @@ const Process = () => {
             {steps.map((step, index) => (
               <div
                 key={index}
-                ref={(el) => (stepsRef.current[index] = el)}
+                ref={(el) => { if (el) stepsRef.current[index] = el; }}
                 className="relative z-10 text-center"
               >
                 <div className="inline-flex items-center justify-center w-20 h-20 rounded-full glassmorphism mb-6 mx-auto">
