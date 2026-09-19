@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { IconMenu, IconX, IconDroplet } from '@tabler/icons-react';
+import { IconMenu, IconX } from '@tabler/icons-react';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -34,8 +34,12 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <IconDroplet className="w-8 h-8 text-ocean-mist" />
+          <div className="flex items-center space-x-3">
+            <img 
+              src="/images/cresta_water_logo.png" 
+              alt="Cresta Water Logo" 
+              className="h-10 w-auto object-contain"
+            />
             <span className="text-xl font-light text-gray-800 tracking-wide">
               Greshalom Ventures
             </span>

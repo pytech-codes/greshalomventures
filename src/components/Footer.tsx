@@ -1,6 +1,6 @@
 'use client';
 
-import { IconDroplet, IconPhone, IconMail, IconMapPin } from '@tabler/icons-react';
+import { IconPhone, IconMail, IconMapPin } from '@tabler/icons-react';
 
 const Footer = () => {
   return (
@@ -9,8 +9,12 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Brand */}
           <div>
-            <div className="flex items-center space-x-2 mb-4">
-              <IconDroplet className="w-8 h-8 text-ocean-mist" />
+            <div className="flex items-center space-x-3 mb-4">
+              <img 
+                src="/images/cresta_water_logo.png" 
+                alt="Cresta Water Logo" 
+                className="h-12 w-auto object-contain"
+              />
               <span className="text-xl font-light text-gray-800 tracking-wide">
                 Greshalom Ventures
               </span>
